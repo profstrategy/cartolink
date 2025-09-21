@@ -1,17 +1,9 @@
-import { cn } from "@/_lib/lib"
 import AppHeading from "@/components/common/app-heading"
 import AppButton from "@/components/common/button/app-button"
+import { GenerateCardProps } from "@/types"
 
-export type CardProps = {
-    id: string
-    icon: React.ReactNode
-    className?: string
-    cardTitle: string
-    cardText: string
-    isNew?: React.ReactNode
-}
-export const useCardProps = (props: CardProps) => {
-    const { icon, cardTitle, isNew, cardText, className, id } = props
+export const useGenerateCard = (props: GenerateCardProps) => {
+    const { icon, cardTitle, isNew, cardText, className, id, badge} = props
 
 
     return {
@@ -21,9 +13,9 @@ export const useCardProps = (props: CardProps) => {
                 <div className="flex flex-col ">
                     <div className="flex justify-start items-center gap-2">
                         <AppHeading variants="h4" className="text-gray-900">{cardTitle}</AppHeading>
-                        {isNew && <AppButton variant="primary" label="new badge" width="3" height="2">New</AppButton>}
+                        {isNew && <AppButton variant="primary" label="new badge" width="3" height="2">{badge}</AppButton>}
                     </div>
-                    <p className="text-[.7rem] text-gray-600 leading-[1]">{cardText}</p>
+                    <p className="text-[.7rem] text-app-text leading-[1]">{cardText}</p>
                 </div>
             </div>
         ),
