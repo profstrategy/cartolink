@@ -6,7 +6,7 @@ import { navbarIcons } from '../common/app-icon-wrapper';
 import IconContainer from '../common/icon-container';
 import { BiSupport } from 'react-icons/bi';
 import { FaBell } from 'react-icons/fa';
-import { MdLightMode } from 'react-icons/md';
+import { ThemeToggle } from '../theme-toggle';
 export const DesktopNavbar = () => {
     return (
         <div>
@@ -29,7 +29,7 @@ export const DesktopNavbar = () => {
                     <IconContainer text='Gallery' className_icon_text_button='p-2 rounded-xl bg-global-btn-bg bg-global-btn-bg' label='gallery' >{navbarIcons[1].icon}</IconContainer>
                     <IconContainer text='Support' label='Contact support' className_icon_text_button='p-2 rounded-xl bg-global-btn-bg' ><BiSupport size={18} className='text-black' /></IconContainer>
                     <IconContainer label='notify me' className_icon_button='p-2 rounded-xl bg-global-btn-bg'><FaBell size={18} className='text-black' /></IconContainer>
-                    <IconContainer label='light mode' className_icon_button='p-2 rounded-xl bg-global-btn-bg'><MdLightMode size={18} className='text-black' /></IconContainer>
+                    <ThemeToggle />
                     <div className='h-8 w-8 custom-gradient rounded-full'></div>
                 </div>
             </div>

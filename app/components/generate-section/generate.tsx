@@ -17,7 +17,7 @@ const GenerateSection = () => {
   return (
     <section className="container">
       <div className="flex justify-between items-center mb-2">
-        <AppHeading variants="h2" className="font-semibold">Generate</AppHeading>
+        <AppHeading variants="h2" className="font- dark:text-white">Generate</AppHeading>
         <button onClick={handleToggle}>
           <IconContainer 
             label={showLess ? "Toggle to view more" : "Toggle to view less"} 
