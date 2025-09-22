@@ -12,9 +12,9 @@ interface ButtonProps {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary';
   type?: 'button' | 'submit' | 'reset';
-  label:string
+  label: string
 }
-const AppButton = ({ children, label, height, width, variant, type, onClick, disabled, className }:ButtonProps) => {
+const AppButton = ({ children, label, height, width, variant, type, onClick, disabled, className }: ButtonProps) => {
 
   const [active, setActive] = useState(false);
 
@@ -33,7 +33,7 @@ const AppButton = ({ children, label, height, width, variant, type, onClick, dis
     rounded-full outline-none transition-all duration-300 select-none
     ${disabled ? 'cursor-not-allowed opacity-70' : 'cursor-pointer'}
     ${active ? 'shadow-md' : ''}
-    ${ `w-[${width}] h-[${height}] p-5 rounded-full`}
+    ${`w-[${width}] h-[${height}] rounded-full`}
   `;
 
   const variantClasses =
@@ -42,14 +42,12 @@ const AppButton = ({ children, label, height, width, variant, type, onClick, dis
       : variant === 'primary' ? `text-blue-100 bg-blue-800 text-xs px-2 py-0.5 rounded-2xl ${disabled ? 'bg-opacity-70' : ''}` : `bg-white ${disabled ? 'bg-opacity-70' : ''}`;
 
   return (
-    <div>
-        <button aria-label={label || 'Button'}
-        type={type}
-        onClick={handleClick}
-        onMouseDown={handleMouseDown}
-        onMouseUp={handleMouseUp} 
-        className={cn(baseClasses,variantClasses, className)}>{children}</button>
-    </div>
+    <button aria-label={label || 'Button'}
+      type={type}
+      onClick={handleClick}
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
+      className={cn(baseClasses, variantClasses, className)}>{children}</button>
   )
 }
 

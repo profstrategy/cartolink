@@ -13,7 +13,7 @@ const MobileNavbarHeader = ({isOpen, handleToggle}: MobileNavbarHeaderProps) => 
     return (
         <div className='bg-white h-16 flex justify-between items-center relative z-50'>
             <Logo logo={logo} imageClassName='w-10 h-10' />
-            <div>
+            <div className='pr-2'>
                 {isOpen ? (
                     <AiOutlineClose 
                         onClick={handleToggle} 

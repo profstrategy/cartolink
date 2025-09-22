@@ -10,7 +10,7 @@ type CarouselInnerProps = {
 }
 const CarouselInner = ({ currentIndex, gotoNext, gotoPrev }: CarouselInnerProps) => {
     return (
-        <div className='flex items-center'>
+        <div className='flex items-center container'>
             <div className='self-center flex mx-auto'>
             {heroCardData.map((_, index) => (
                 <div key={index} className={`w-2 h-2 mx-1 rounded-full self-center ${currentIndex === index ? 'bg-black transition-all ease-in-out duration-200' : 'bg-gray-300 transition-all ease-in-out duration-200'}`}>

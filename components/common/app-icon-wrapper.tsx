@@ -1,10 +1,11 @@
-import { HiAcademicCap, HiLightningBolt, HiPencil, HiSparkles, HiSwitchHorizontal, HiVideoCamera } from "react-icons/hi";
-import { FaVideo, FaImage, FaFolder } from 'react-icons/fa';
+import { HiAcademicCap, HiLightningBolt, HiSparkles, HiSwitchHorizontal } from "react-icons/hi";
+import { FaVideo, FaImage, FaFolder, FaThinkPeaks } from 'react-icons/fa';
 import { GiMicrophone } from 'react-icons/gi';
 import { AiFillHome } from 'react-icons/ai';
 import { MdOutlinePermMedia } from 'react-icons/md';
 import { FaPenRuler } from 'react-icons/fa6';
 import { TbBallpenOff } from 'react-icons/tb';
+import { LiaSafari } from 'react-icons/lia';
 
 type IconWrapperProps = { 
   children: React.ReactNode; 
@@ -37,11 +38,11 @@ export const generateCardIcons = {
     )
   },
   edit: {
-    icon: <HiPencil size={20} />,
+    icon: <FaThinkPeaks size={20} />,
     bgColor: "bg-purple-500",
     iconComponent: () => (
       <AppIconWrapper bgColor="bg-purple-500">
-        <HiPencil size={20} />
+        <FaThinkPeaks size={20} />
       </AppIconWrapper>
     )
   },
@@ -82,11 +83,11 @@ export const generateCardIcons = {
     )
   },
   train: {
-    icon: <HiAcademicCap size={20} />,
+    icon: <LiaSafari size={20} />,
     bgColor: "bg-orange-400",
     iconComponent: () => (
       <AppIconWrapper bgColor="bg-orange-400">
-        <HiAcademicCap size={20} />
+        <LiaSafari size={20} />
       </AppIconWrapper>
     )
   }

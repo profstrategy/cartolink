@@ -38,11 +38,6 @@ body {
 }
 
 .custom-gradient {
-  background: radial-gradient(circle, 
-    #f0abfc 0%, 
-    #ffffff 40%, 
-    #a5f3fc 70%, 
-    #fbcfe8 100%
-  );
+  background: linear-gradient(to bottom, #87CEEB, #000080);
 }
 
