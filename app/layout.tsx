@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { Inter} from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import dynamic from "next/dynamic";
+import { Provider } from "@/components/providers/theme-provider";
+
 const Navbar = dynamic(() => import('@/components/navbar/navbar'))
 const Footer = dynamic(() => import('@/components/footer'))
 
@@ -22,12 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${inter.variable} ${inter.variable} antialiased`}
-      >
-        <Navbar />
-        {children}
-        <Footer />
+      <body className={`${inter.variable} antialiased`}>
+        <Provider>
+          <Navbar />
+          {children}
+          <Footer />
+        </Provider>
       </body>
     </html>
   );

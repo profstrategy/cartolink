@@ -1,33 +1,44 @@
 @import "tailwindcss";
 
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --gray-scale: #f3f4f6;
-  --app-text-color: '#4b5563'
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --color-global-btn-bg: var(--gray-scale);
-  --color-app-text: var(--app-text-color);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground:  #F3F4F6;
+    --background: #ffffff;
+    --foreground: #171717;
+    --gray-scale: #f3f4f6;
+    --app-text-color: #4b5563;
+    --global-btn-bg: #f8fafc;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  .dark {
+    --background: #0a0a0a;
+    --foreground: #F3F4F6;
+    --gray-scale: #374151;
+    --app-text-color: #9ca3af;
+    --global-btn-bg: #1f2937;
+  }
+
+  html {
+    @apply transition-colors duration-300;
+  }
+  
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply transition-colors duration-300;
+  }
+
+  /* Custom utility classes */
+  .text-app-text {
+    color: var(--app-text-color);
+  }
+
+  .bg-global-btn-bg {
+    background-color: var(--global-btn-bg);
+  }
+
+  .bg-app-text {
+    color: var(--app-text-color);
+  }
 }
 
 .container {
@@ -40,4 +51,3 @@ body {
 .custom-gradient {
   background: linear-gradient(to bottom, #87CEEB, #000080);
 }
-

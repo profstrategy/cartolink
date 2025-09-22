@@ -17,15 +17,15 @@ const GenerateSection = () => {
   return (
     <section className="container">
       <div className="flex justify-between items-center mb-2">
-        <AppHeading variants="h2" className="font-semibold">Generate</AppHeading>
+        <AppHeading variants="h2" className="font-semibold dark:text-white">Generate</AppHeading>
         <button onClick={handleToggle}>
           <IconContainer 
             label={showLess ? "Toggle to view more" : "Toggle to view less"} 
             text={showLess ? "show all" : "show less"} 
-            className_icon_text_button="flex-row-reverse items-center h-4 items-center" 
+            className_icon_text_button="flex-row-reverse items-center h-4 items-center text-black dark:text-white" 
             text_color
           >
-            <IoIosArrowUp className={`h-4 w-4 text-blue-500 transition-transform duration-300 cursor-pointer ${!showLess ? 'rotate-180' : ''}`} />
+            <IoIosArrowUp className={`h-4 w-4 text-blue-500 dark:text-blue-400 transition-transform duration-300 cursor-pointer ${!showLess ? 'rotate-180' : ''}`} />
           </IconContainer>
         </button>
       </div>
@@ -44,7 +44,9 @@ const GenerateSection = () => {
         
         {/* Gradient overlay when cards are hidden */}
         {showLess && (
-          <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-b from-black to-80% to-transparent backdrop-blur-3xl top-12 pointer-events-none text-white text-center cursor-pointer"><p onClick={handleToggle} className="z-50">Show More</p></div>
+          <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-b from-white dark:from-gray-900 to-80% to-transparent backdrop-blur-3xl top-12 pointer-events-none text-black dark:text-white text-center cursor-pointer">
+            <p onClick={handleToggle} className="z-50">Show More</p>
+          </div>
         )}
       </div>
     </section>
