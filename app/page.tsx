@@ -8,14 +8,10 @@ const Footer = dynamic(() => import('@/components/footer'))
 
 export default function Home() {
   return (
-    <>
-    <div className="mb-16">
-      <Navbar />
+    <div className="flex flex-col md:gap-8 gap-4">
       <AppHeroSection />
-      </div>
       <GenerateSection />
       <Gallery />
-      <Footer />
-    </>
+    </div>
   );
 }

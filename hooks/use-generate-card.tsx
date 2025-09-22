@@ -5,7 +5,6 @@ import { GenerateCardProps } from "@/types"
 export const useGenerateCard = (props: GenerateCardProps) => {
     const { icon, cardTitle, isNew, cardText, className, id, badge} = props
 
-
     return {
         firstContent: (
             <div className="flex gap-[.5rem] items-center justify-start w-full" key={id}>

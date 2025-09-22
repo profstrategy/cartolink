@@ -14,7 +14,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className='mb-16'>
+        <nav className='md:mb-8 mb-4'>
             {windowResize.width > 900 ? <DesktopNavbar /> : (
                 <div>
                     <MobileNavbarHeader isOpen={isOpen} handleToggle={handleToggleNavbar} />

@@ -15,7 +15,7 @@ export const MobileNavbar = ({ isOpen }: MobileNavbarProps) => {
             fixed top-16 left-0 right-0 z-40 
             bg-global-btn-bg px-4 py-2
             transform transition-transform duration-500 ease-in-out
-            ${isOpen ? 'translate-y-0' : '-translate-y-full'}
+            ${isOpen ? 'translate-y-0' : '-translate-y-[999rem]'}
         `}>
             <div className='flex flex-col w-full py-2 gap-4 max-h-80'>
                 <div className='flex justify-between'>
@@ -39,8 +39,8 @@ export const MobileNavbar = ({ isOpen }: MobileNavbarProps) => {
                         ))}
                     </div>
 
-                    <div className='flex flex-col gap-4'>
-                        <div className='flex justify-between items-center'>
+                    <div className='flex flex-col gap-2'>
+                        <div className='flex justify-end gap-2 items-center'>
                             <div className='flex gap-2'>
                                 <IconContainer label='notify me' className_icon_button='p-2 rounded-xl bg-white'>
                                     <FaBell size={18} className='text-black' />
@@ -52,10 +52,10 @@ export const MobileNavbar = ({ isOpen }: MobileNavbarProps) => {
                             <div className='h-8 w-8 custom-gradient rounded-full'></div>
                         </div>
 
-                        <div className='flex gap-2'>
+                        <div className='flex-col gap-2'>
                             <IconContainer 
                                 text='Gallery' 
-                                className_icon_text_button='p-2 rounded-xl bg-white' 
+                                className_icon_text_button=' rounded-xl p-1 bg-white mb-1' 
                                 label='gallery'
                             >
                                 {navbarIcons[1].icon}
@@ -63,7 +63,7 @@ export const MobileNavbar = ({ isOpen }: MobileNavbarProps) => {
                             <IconContainer 
                                 text='Support' 
                                 label='Contact support' 
-                                className_icon_text_button='p-2 rounded-xl bg-white'
+                                className_icon_text_button='rounded-xl p-1 bg-white'
                             >
                                 <BiSupport size={18} className='text-black' />
                             </IconContainer>

@@ -11,7 +11,7 @@ export const DesktopNavbar = () => {
     return (
         <div>
             <div className='flex justify-between items-center h-16'>
-                <div className='flex items-center justify-between gap-4'>
+                <div className='flex items-center justify-between md:gap-0 gap-4'>
                     <Logo logo={logo} className='self-start' />
                     <div className='flex gap-2 items-center'>
                         <div className='h-8 w-8 custom-gradient rounded-full'></div>
@@ -25,7 +25,7 @@ export const DesktopNavbar = () => {
                         <IconContainer key={_} className_icon_button='p-3 hover:bg-white rounded-2xl transition-all duration-200 ease-in-out' label={icon.label}>{icon.icon}</IconContainer>
                     ))}
                 </div>
-                <div className='flex gap-2 items-center justify-center'>
+                <div className='flex gap-2 items-center justify-center pr-4'>
                     <IconContainer text='Gallery' className_icon_text_button='p-2 rounded-xl bg-global-btn-bg bg-global-btn-bg' label='gallery' >{navbarIcons[1].icon}</IconContainer>
                     <IconContainer text='Support' label='Contact support' className_icon_text_button='p-2 rounded-xl bg-global-btn-bg' ><BiSupport size={18} className='text-black' /></IconContainer>
                     <IconContainer label='notify me' className_icon_button='p-2 rounded-xl bg-global-btn-bg'><FaBell size={18} className='text-black' /></IconContainer>
