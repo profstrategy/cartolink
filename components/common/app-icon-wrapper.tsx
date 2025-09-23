@@ -99,7 +99,7 @@ export const navbarIcons = [
     label: 'Home',
   },
   {
-    icon: <MdOutlinePermMedia size={18} className="text-black" />,
+    icon: <MdOutlinePermMedia size={18} className="text-black " />,
     label: 'Media',
   },
    {
