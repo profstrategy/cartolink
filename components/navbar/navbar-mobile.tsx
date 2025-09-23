@@ -27,14 +27,14 @@ export const MobileNavbar = ({ isOpen }: MobileNavbarProps) => {
                 </div>
 
                 <div className='flex justify-between items-center'>
-                    <div className='grid grid-cols-3 gap-4 justify-center items-center bg-white dark:bg-gray-800 p-2 rounded-2xl'>
+                    <div className='grid grid-cols-3 gap-4 justify-center items-center bg-white p-2 rounded-2xl'>
                         {navbarIcons.map((icon, index) => (
                             <IconContainer 
                                 key={index} 
                                 className_icon_button='p-3 hover:bg-global-btn-bg rounded-2xl transition-all duration-200 ease-in-out bg-global-btn-bg' 
                                 label={icon.label}
                             >
-                                <div className="text-black dark:text-white">
+                                <div className=" dark:text-white">
                                     {React.cloneElement(icon.icon, { className: 'text-current' })}
                                 </div>
                             </IconContainer>

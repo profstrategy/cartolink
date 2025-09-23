@@ -11,7 +11,7 @@ type MobileNavbarHeaderProps = {
 
 const MobileNavbarHeader = ({isOpen, handleToggle}: MobileNavbarHeaderProps) => {
     return (
-        <div className='bg-white dark:bg-gray-900 h-16 flex justify-between items-center relative z-50 transition-colors duration-300'>
+        <div className='bg-white dark:bg-gray-900 h-16 flex justify-between items-center relative z-50 transition-colors duration-300 sticky'>
             <Logo logo={logo} imageClassName='w-10 h-10' />
             <div className='pr-2'>
                 {isOpen ? (
